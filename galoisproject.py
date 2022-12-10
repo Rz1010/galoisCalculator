@@ -19,9 +19,9 @@ def add(a,b,m,isbin):
 	a = GF(a)
 	b = GF(b)
 	if isbin:
-		print(bin(int(a+b))[2:])
+		return bin(int(a+b))[2:]
 	else:
-		print(hex(int(a+b))[2:])
+		return hex(int(a+b))[2:]
 	
 def sub(a,b,m,isbin):
 
@@ -29,27 +29,27 @@ def sub(a,b,m,isbin):
 	a = GF(a)
 	b = GF(b)
 	if isbin:
-		print(bin(int(a-b))[2:])
+		return bin(int(a-b))[2:]
 	else:
-		print(hex(int(a-b))[2:])
+		return hex(int(a-b))[2:]
 	
 def multiply(a,b,m,isbin):
 	GF = galois._fields._factory._GF_extension(2,m,irreducible_poly_ = prims[str(m)] ,alpha=2, verify=False)
 	a = GF(a)
 	b = GF(b)
 	if isbin:
-		print(bin(int(a*b))[2:])
+		return bin(int(a*b))[2:]
 	else:
-		print(hex(int(a*b))[2:])
+		return hex(int(a*b))[2:]
 	
 def divide(a,b,m,isbin):
 	GF = galois._fields._factory._GF_extension(2,m,irreducible_poly_ = prims[str(m)] ,alpha=2, verify=False)
 	a = GF(a)
 	b = GF(b)
 	if isbin:
-		print(bin(int(a/b))[2:])
+		return bin(int(a/b))[2:]
 	else:
-		print(hex(int(a/b))[2:])
+		return hex(int(a/b))[2:]
 
 def modulo(a,m,isbin):
 	GF = galois._fields._factory._GF_extension(2,m,irreducible_poly_ = prims[str(m)] ,alpha=2, verify=False)
@@ -57,53 +57,15 @@ def modulo(a,m,isbin):
 	mod = GF.irreducible_poly
 	a=a%mod
 	if isbin:
-		print(bin(int(a))[2:])
+		return bin(int(a))[2:]
 	else:
-		print(hex(int(a))[2:])
+		return hex(int(a))[2:]
 
 
 def invert(a,m,isbin):
 	GF = galois._fields._factory._GF_extension(2,m,irreducible_poly_ = prims[str(m)] ,alpha=2, verify=False)
 	a = GF(a)
 	if isbin:
-		print(bin(int(a**-1))[2:])
+		return bin(int(a**-1))[2:]
 	else:
-		print(hex(int(a**-1))[2:])
-		
-		
-#####################################################################################
-
-# Main Test Area 
-#You wont need these just use the functions 
-#For each function :
-#a,b are operands (sometimes a only)
-#m is the power , limited to what we have
-#isbin choosing the input and output format to be binary or hexa
-
-isbin = False
-
-op = input('Please enter operation symbol:')
-
-if isbin:
-	a = int(input("Please enter first operand as binary form: "),2)
-	b = int(input("Please enter second operand as binary form: "),2)
-else :
-	a = int(input("Please enter first operand as hex form: "),16)
-	b = int(input("Please enter second operand as hex form: "),16)
-
-m = int(input("Please enter m: "))
-
-
-
-if op == '+':
-	add(a,b,m,isbin)
-elif op == '-' :
-	sub(a,b,m,isbin)
-elif op == '*' :
-	multiply(a,b,m,isbin)
-elif op == '/' :
-	divide(a,b,m,isbin)
-elif op == '%' :
-	modulo(a,m,isbin)
-else :
-	invert(a,m,isbin)
+		return hex(int(a**-1))[2:]
