@@ -1,6 +1,6 @@
 # Galois Large Fields Calculator  
   
-A calculator for huge standard galois field powers of form GF(2^m)  
+A calculator for huge standard galois field powers of form GF(2^m) with predefined irredeucable polynomial 
 
 Offered Functionalities:  
 *Addition  
@@ -19,7 +19,7 @@ Offered Fields: GF(2^m) with m=
 *409  
 *571  
   
-Backend: Python using galois library:  
+Backend: Python galois library (Thanks to @mhostetter)
 *pip install galois  
   
 Frontend: QT  
