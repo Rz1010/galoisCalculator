@@ -1,6 +1,6 @@
 # Galois Large Fields Calculator  
   
-A calculator for huge standard galois field powers of form GF(2^m) with predefined irredeucable polynomial 
+A calculator for huge standard Galois field powers of form GF(2^m) with predefined irreducible polynomial 
 
 Offered Functionalities:  
 *Addition  
