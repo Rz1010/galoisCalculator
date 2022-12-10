@@ -19,6 +19,8 @@ Offered Fields: GF(2^m) with m=
 *409  
 *571  
   
+Input and Output can be expressed in Binary or Hexadecimal  
+  
 Backend: Python galois library (Thanks to @mhostetter)  
 *pip install galois  
   
