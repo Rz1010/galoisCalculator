@@ -19,7 +19,7 @@ Offered Fields: GF(2^m) with m=
 *409  
 *571  
   
-Backend: Python galois library (Thanks to @mhostetter)
+Backend: Python galois library (Thanks to @mhostetter)  
 *pip install galois  
   
 Frontend: QT  
